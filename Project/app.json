@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/info/info",
+    "pages/mine/mine",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#f00",
+    "navigationBarTitleText": "礼·遇",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "img/首页1.png",
+      "selectedIconPath": "img/首页2.png"
+    },
+    {
+      "pagePath": "pages/info/info",
+      "text": "资讯",
+      "iconPath": "img/资讯1.png",
+      "selectedIconPath": "img/资讯2.png"
+    },
+    {
+    "pagePath": "pages/mine/mine",
+    "text": "我的",
+    "iconPath": "img/我的1.png",
+    "selectedIconPath": "img/我的2.png"
+  }
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
