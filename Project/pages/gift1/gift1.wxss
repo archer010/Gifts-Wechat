@@ -1,0 +1,343 @@
+/* pages/gift1/gift1.wxss */
+page{
+  background: #f2f2f2;
+}
+.container{
+  padding: 0;
+  background: #f2f2f2;
+}
+.top{
+  height: 360rpx;
+  width: 100%;
+  background: linear-gradient(#e50e38, #f0743e);
+}
+.top .text1{
+  font-size: 40rpx;
+  color: #fff;
+  padding-left:80rpx;
+  position: relative;
+  top: 80rpx;
+  display: block;
+}
+.top .text2{
+  font-size: 30rpx;
+  color: #fff;
+  padding-left:80rpx;
+  position: relative;
+  top: 90rpx;
+  display: block;
+}
+.top .guide{
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: #f34043;
+  position: absolute;
+  right: 40rpx;
+  top: 40rpx;
+  text-align: center;
+  color: #fff;
+  padding: 20rpx;
+  line-height: 30rpx;
+  font-size: 24rpx;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.swiper {
+  height: 312.5rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.no-product{
+  background: #faf1ea;
+  width: 680rpx;
+  height: 160rpx;
+  border-radius:16rpx;
+  position: relative;
+  top:-80rpx;
+  vertical-align: middle;
+}
+.no-product .gift-icon1{
+  width:80rpx;
+  height:80rpx;
+  display:inline-block;
+  vertical-align:middle;
+  padding-top:40rpx;
+  padding-left:40rpx;
+  padding-right:40rpx;
+}
+.no-product .none-tip{
+  display: inline-block;
+  width: 450rpx;
+  position:relative;
+  top:40rpx;
+}
+.no-product .none-tip .tip1{
+  color: #bea272;
+  font-size: 34rpx;
+  display: block;
+}
+.no-product .none-tip .tip2{
+  color: #000;
+  font-size: 30rpx;
+  display: block;
+  position: relative;
+  top: 10rpx;
+}
+.gift-lists{
+  background: #fff;
+  width: 620rpx;
+  border-radius:16rpx;
+  position: relative;
+  top:-80rpx;
+  padding:30rpx;
+}
+.gift-lists .item{
+  margin-bottom: 20rpx;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-bottom:10rpx;
+}
+.gift-lists .item .item-img{
+  width: 140rpx;
+  height: 140rpx;
+  padding-right: 20rpx;
+}
+.gift-lists .item .caption{
+  width: 400rpx;
+  display: inline-block;
+}
+.gift-lists .item .name{
+  width: 400rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.gift-lists .item .brief{
+  width: 400rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #ccc;
+}
+.gift-lists .item .price{
+  width: 400rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #e50e38;
+}
+.gift-lists .item .btn-group{
+  position: absolute;
+  right:0;
+  bottom:10rpx;
+  width:180rpx;
+}
+.gift-lists .item .btn-group .minus{
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  border: 2rpx solid #ccc;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 36rpx;
+  color: #ccc;
+  font-size: 28rpx;
+}
+.gift-lists .item .btn-group .plus{
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  border: 2rpx solid #ccc;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 36rpx;
+  color: #ccc;
+  font-size: 28rpx;
+}
+.gift-lists .item .btn-group .ipt{
+  width:80rpx;
+  display:inline-block;
+  text-align: center;
+  height: 36rpx;
+  font-size: 28rpx;
+  vertical-align:middle;
+  background: #f9f9f9;
+  margin: 0 6rpx;
+}
+.gift-lists .gift-total{
+  height: 48rpx;
+}
+.gift-lists .gift-total .num{
+  color: #ccc;
+  font-size:28rpx; 
+  line-height: 48rpx;
+  vertical-align: middle;
+}
+.gift-lists .gift-total .add{
+  color: #9786ed;
+  font-size:28rpx; 
+  float: right;
+  line-height: 48rpx;
+  vertical-align: middle;
+}
+.selectType{
+  width: 620rpx;
+  height: 60rpx;
+  position: relative;
+  top: -80rpx;
+  padding: 10rpx 65rpx;
+}
+.selectType .typeName{
+  font-size: 28rpx;
+  display: inline;
+  vertical-align: middle;
+  line-height:60rpx;
+}
+.selectType .selectBtn{
+  font-size: 28rpx;
+  float: right;
+  vertical-align: middle;
+  line-height: 60rpx;
+  color: #9786ed;
+}
+.typeIpt{
+    background: #fff;
+    width: 620rpx;
+    border-radius:16rpx;
+    position: relative;
+    top:-80rpx;
+    padding:0rpx 30rpx;
+    height: 80rpx;
+    vertical-align: middle;
+}
+.typeIpt .ipt-wrap{
+  font-size: 28rpx;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  position: absolute;
+  height: 80rpx;
+  vertical-align: middle;
+  line-height: 80rpx;
+  width: 120rpx;
+  color: #000;
+  padding-right:10rpx;
+}
+.timer{
+  font-size: 28rpx;
+  position: absolute;
+  height: 80rpx;
+  vertical-align: middle;
+  line-height: 80rpx;
+  width: 420rpx;
+  color: #000;
+  top: 0;
+  right: 30rpx;
+  text-align: right;
+}
+.typeIpt .ipt-wrap .num{
+  width: 60rpx;
+  display: inline-block;
+  height:80rpx;
+  vertical-align:middle;
+  padding-right: 8rpx;
+  text-align: right;
+}
+.typeIpt .icon{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  padding-right: 10rpx;
+  padding-top: 20rpx;
+  line-height: 80rpx;
+}
+.typeIpt .tip{
+  font-size: 28rpx;
+  color: #ccc;
+  display: inline-block;
+  top: 0;
+  position: absolute;
+  height: 80rpx;
+  vertical-align: middle;
+  line-height: 80rpx;
+}
+.wish{
+  background: #fff;
+  width: 620rpx;
+  border-radius:16rpx;
+  position: relative;
+  padding:10rpx 30rpx;
+  vertical-align: middle;
+  top:-80rpx;
+  color: #ccc;
+  font-size: 32rpx;
+  padding-bottom: 60rpx;
+}
+.total-price{
+  position: relative;
+  top: -66rpx;
+}
+.total-price .price{
+  font-size: 64rpx;
+  padding-left: 10rpx;
+}  
+.btn-finish{
+  background: #e50e38;
+  border:none;
+  color: #fff;
+  width: 580rpx;
+  font-size: 32rpx;
+  padding: 8rpx 0;
+  position: relative;
+  top: -60rpx;
+}
+.bottom{
+  padding-bottom: 10rpx;
+  position: relative;
+  top: -40rpx
+}
+.bottom .guide{
+  display: inline-block;
+  font-size: 28rpx;
+  color: #ccc;
+  vertical-align: middle;
+  padding: 0 10rpx;
+  height: 32rpx;
+}
+.bottom .agree{
+  display: inline-block;
+  font-size: 28rpx;
+  color: #ccc;
+  vertical-align: middle;
+  padding: 0 10rpx;
+  height: 32rpx;
+}

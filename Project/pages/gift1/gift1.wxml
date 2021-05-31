@@ -1,0 +1,73 @@
+<view class="container">
+    <view class="top">
+        <text class="text1">微信送礼新方式</text>
+        <text class="text2">微信上送礼·对方填地址·免邮送上门</text>
+        <navigator url="/pages/guide/guide" class="guide">操作指南</navigator>
+    </view> 
+    <block wx:if="{{gifts.length>0}}">
+      <view class="gift-lists">
+        <block wx:for="{{gifts}}" wx:for-index="index" wx:key="key">
+            <view class="item">
+              <image class="item-img" src="{{item.img}}"></image>
+              <view class="caption">
+                  <view class="name">{{item.name}}</view>
+                  <view class="brief">{{item.brief}}</view>
+                  <view class="price">¥{{item.price}}</view>
+              </view>
+              <view class="btn-group">
+                  <view class="minus" bindtap='minusAction' data-id="{{item.product_id}}">-</view>
+                  <input type="number" disabled class="ipt" value="{{item.num}}"></input>
+                  <view class="plus" bindtap='plusAction' data-id="{{item.product_id}}">+</view>
+              </view>
+            </view>          
+        </block>
+        <view class="gift-total">
+            <text class="num">共{{totalgiftsNum}}件礼物</text>
+            <text bindtap='bindViewTap' class="add">继续添加></text>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="no-product" bindtap='bindViewTap'>
+        <image class="gift-icon1" src='../../img/首页礼图标.jpg'></image>
+        <view class="none-tip">
+          <text class="tip1">开始挑选礼物</text>
+          <text class="tip2">点击这里，挑选喜欢的礼物</text>
+        </view>
+      </view>
+    </block>
+    <view class="selectType">
+        <view class="typeName">{{gifttype}}</view>
+        <view class="selectBtn" bindtap='selectType'>更改玩法></view>
+    </view>
+    <block wx:if="{{gifttype=='定时开奖'}}">
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" class="typeIpt">
+          <image src="../../images/ipt-icon1.png" class="icon"></image>
+          <view class="tip">定时开奖</view>
+          <view class="timer">
+          {{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}:{{multiArray[2][multiIndex[2]]}}</view>
+      </picker>
+    </block>
+    <block wx:elif="{{gifttype=='满人开奖'}}">
+      <view class="typeIpt">
+          <image src="../../images/ipt-icon1.png" class="icon"></image>
+          <view class="tip">开奖人数</view>
+          <view class="ipt-wrap"><input bindinput="personChange" class="num" value="{{personNum}}" maxlength="3" placeholder='人数' type="number"></input>人</view>
+      </view>
+    </block>
+    <block wx:else>
+      <view bindtap='selectType' class="typeIpt">
+          <image src="../../img/首页礼2.jpg" class="icon"></image>
+          <view class="tip">每人最多可领一份礼物</view>
+      </view>
+    </block>
+    <view class="selectType">
+        <view class="typeName">传达心意，写祝福语</view>
+    </view> 
+    <textarea show-confirm-bar="false" class="wish" auto-height placeholder="大吉大利，送你好礼" placeholder-style="color:#ccc;" value="{{wish}}" bindinput="bindwish"/>
+    <view class="total-price">¥<text class="price">{{totalPrice}}</text></view>
+    <button class="btn-finish" bindtap='getRedPackage'>生成礼物红包</button>
+    <view class="bottom">
+        <navigator class="guide" url="/pages/guide/guide" hover-class="navigator-hover">使用说明</navigator>
+    </view>
+</view>

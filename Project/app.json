@@ -1,6 +1,10 @@
 {
   "pages":[
+    "pages/gift1/gift1",
+    "pages/guide/guide",
     "pages/index/index",
+    "pages/choose/choose",  
+    "pages/list/list",  
     "pages/info/info",
     "pages/mine/mine",
     "pages/logs/logs"
@@ -14,14 +18,14 @@
   },
   "tabBar": {
     "list": [{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/gift1/gift1",
       "text": "首页",
       "iconPath": "img/首页1.png",
       "selectedIconPath": "img/首页2.png"
     },
     {
       "pagePath": "pages/info/info",
-      "text": "资讯",
+      "text": "礼物推荐",
       "iconPath": "img/资讯1.png",
       "selectedIconPath": "img/资讯2.png"
     },
