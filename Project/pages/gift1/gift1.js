@@ -173,7 +173,7 @@ Page({
   selectType:function(){//选择开奖方式
     var _this = this;
     wx.showActionSheet({
-      itemList: ['直接送礼', '定时开奖', '满人开奖'],
+      itemList: ['直接送礼', '定时', '满人开奖'],
       success: function (res) {
         if(res.tapIndex=="0"){
           _this.setData({
@@ -197,7 +197,7 @@ Page({
       }
     })
   },
-  onLoad: function () {
+  onLoad: function () {//主函数
     var _this = this;
     _this.getDate();
     this.setData({
@@ -293,7 +293,7 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: '来一场意外的邂逅',
+      title: '线上送礼，来一场意外的邂逅',
       path: '/page/user?id=123'
     }
   },

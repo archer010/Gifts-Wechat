@@ -1,1 +1,39 @@
 /* pages/list/list.wxss */
+.select-tit{
+  margin:0px auto; 
+  text-align: center;
+  width: 750rpx;
+  height: 50rpx;
+  background-color: rgb(75, 192, 228);
+  border-radius: 15rpx;
+}
+.product{
+  width: 375rpx;
+  height: 300rpx;
+  border: 1px solid red;
+}
+image{
+  width: 180rpx;
+  height: 200rpx;
+  display: block;
+  margin: 0px auto;
+}
+.pro-text{
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0px auto;
+}
+.but{
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+}
+.but image{
+  margin-left: -25rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.pro-name{
+  width: 100rpx;
+  height: 50rpx;
+}

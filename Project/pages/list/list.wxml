@@ -1,2 +1,12 @@
 <!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view class="select-tit">选择您喜欢的礼物吧</view>
+<view class="product">
+<image src="../../img/首页礼2.jpg"></image>
+<view class="pro-text">
+<button class="but"><image src="../../img/加.png"></image></button>
+<text class="pro-name">随机礼物</text>
+<button class="but"><image src="../../img/减少.png"></image></button>
+<text></text>
+</view>
+</view>
+
