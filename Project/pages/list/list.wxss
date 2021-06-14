@@ -8,20 +8,20 @@
   border-radius: 15rpx;
 }
 .product{
-  width: 375rpx;
+  width: 745rpx;
   height: 300rpx;
-  border: 1px solid red;
+  border: 1px solid gray;
 }
 image{
-  width: 180rpx;
+  width: 300rpx;
   height: 200rpx;
-  display: block;
-  margin: 0px auto;
+  float: left;
 }
 .pro-text{
-  width: 300rpx;
+  width: 425rpx;
   height: 300rpx;
   margin: 0px auto;
+  display: inline-block;
 }
 .but{
   width: 50rpx;
@@ -36,4 +36,20 @@ image{
 .pro-name{
   width: 100rpx;
   height: 50rpx;
+}
+.buy{
+  margin-top: 35rpx;
+  width: 300rpx;
+  height: 100rpx;
+  background-color: red;
+  color:white;
+}
+.price{
+  margin-top: 20rpx;
+  color: red;
+  margin-left: 100rpx;
+}
+.you{
+  width: 100rpx;
+  height: 100rpx;
 }

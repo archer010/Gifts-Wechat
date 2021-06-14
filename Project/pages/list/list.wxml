@@ -1,12 +1,72 @@
 <!--pages/list/list.wxml-->
-<view class="select-tit">选择您喜欢的礼物吧</view>
+<SearchInput></SearchInput>
 <view class="product">
-<image src="../../img/首页礼2.jpg"></image>
+<image src="../../img/g1.webp" mode="widthFix"></image>
 <view class="pro-text">
-<button class="but"><image src="../../img/加.png"></image></button>
-<text class="pro-name">随机礼物</text>
-<button class="but"><image src="../../img/减少.png"></image></button>
-<text></text>
+<text class="pro-name">客厅茶几家用简约网红款多层北欧轻奢风零食盘
+</text>
+<view class="price">单价：￥88</view>
+<button class="buy" data-text="0" bindtap='getGift'>购买</button>
+</view>
+</view>
+
+<view class="product">
+<image src="../../img/g2.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">大英博物馆安德森猫风暴瓶天气预报瓶创意毕业礼
+</text>
+<view class="price">单价：￥288</view>
+<button class="buy" data-text="1" bindtap='getGift'>购买</button>
+</view>
+</view>
+
+<view class="product">
+<image src="../../img/g3.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">生日礼物送女友女生的情人节惊喜实用浪漫创意
+</text>
+<view class="price">单价：￥66</view>
+<button class="buy" data-text="2" bindtap='getGift'>购买</button>
+</view>
+</view>
+
+<view class="product">
+<image src="../../img/g4.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">儿童节生日礼物男孩女孩小学生奖励实用毕业
+</text>
+<view class="price">单价：￥69</view>
+<button class="buy" data-text="3" bindtap='getGift'>购买</button>
+</view>
+</view>
+
+<view class="product">
+<image src="../../img/g5.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">生日礼物送女友给朋友闺蜜毕业走心实用
+</text>
+<view class="price">单价：￥123</view>
+<button class="buy" data-text="3" bindtap='getGift'>购买</button>
+</view>
+</view>
+
+<view class="product">
+<image src="../../img/g2.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">大英博物馆安德森猫风暴瓶天气预报瓶创意毕业礼
+</text>
+<view class="price">单价：￥888</view>
+<button class="buy" data-text="1" bindtap='getGift'>购买</button>
+</view>
+</view>
+
+<view class="product">
+<image src="../../img/g2.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">大英博物馆安德森猫风暴瓶天气预报瓶创意毕业礼
+</text>
+<view class="price">单价：￥888</view>
+<button class="buy" data-text="1" bindtap='getGift'>购买</button>
 </view>
 </view>
 

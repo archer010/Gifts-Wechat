@@ -4,18 +4,18 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
-    gifttype:'直接送礼',
-    hasUserInfo: false,
+    gifttype:'直接送礼',//送礼方式
+    hasUserInfo: false,//用户信息
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    totalPrice:"0.00",
+    totalPrice:"0.00",//总价值
     multiArray: ['', '', ''],
-    gifts:[],
+    gifts:[],//礼物数组
     personNum:3,
     objectMultiArray: [
         [], 
         [], 
         []
-    ],
+    ],//礼物列表
     multiIndex: [0, 0, 0],
     weekArr:['周日','周一','周二','周三','周四','周五','周六'],
     wish:''
@@ -31,7 +31,7 @@ Page({
       _this.data.personNum = p_num;
       wx.setStorageSync('p_num', e.detail.value);
   },
-  getDate:function(){
+  getDate:function(){//获取日期
     var _this = this;
     var _now = new Date();//当前时间
     var multi0 ='multiArray['+0+']';
@@ -114,7 +114,7 @@ Page({
       return MinutsArr;
     }
   },
-  bindMultiPickerChange: function (e) {
+  bindMultiPickerChange: function (e) {//级联列表
     //console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       multiIndex: e.detail.value
@@ -200,18 +200,18 @@ Page({
   onLoad: function () {//主函数
     var _this = this;
     _this.getDate();
+    var gif=JSON.parse(wx.getStorageSync('gifts'));
+    console.log(gif);
     this.setData({
       gifts: wx.getStorageSync('gifts') || [],
       wish: wx.getStorageSync('wish') || '',
       gifttype: wx.getStorageSync('gifttype') || '直接送礼',
       personNum: wx.getStorageSync('p_num') || this.data.personNum,
     },() => {//获取商品总数并且赋值
-        var _total = 0;
+        var _total = 1;
         var _price = 0;
-        for (var i = 0; i < _this.data.gifts.length;i++){
-          _total += parseInt(_this.data.gifts[i].num);
-          _price += parseFloat(_this.data.gifts[i].price) * _this.data.gifts[i].num;
-        };
+        _price = parseFloat(gif.price);
+        console.log(_total,_price);
         _this.setData({
           totalgiftsNum:_total,
           totalPrice: _price.toFixed(2)

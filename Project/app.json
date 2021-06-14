@@ -1,41 +1,43 @@
 {
-  "pages":[
+  "pages": [
     "pages/gift1/gift1",
     "pages/guide/guide",
     "pages/index/index",
-    "pages/choose/choose",  
-    "pages/list/list",  
+    "pages/choose/choose",
+    "pages/list/list",
     "pages/info/info",
     "pages/mine/mine",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/search_/search_"
   ],
-  "window":{
-    "backgroundTextStyle":"dark",
+  "window": {
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#f00",
     "navigationBarTitleText": "礼·遇",
-    "navigationBarTextStyle":"white",
-    "enablePullDownRefresh":true
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/gift1/gift1",
-      "text": "首页",
-      "iconPath": "img/首页1.png",
-      "selectedIconPath": "img/首页2.png"
-    },
-    {
-      "pagePath": "pages/info/info",
-      "text": "礼物推荐",
-      "iconPath": "img/资讯1.png",
-      "selectedIconPath": "img/资讯2.png"
-    },
-    {
-    "pagePath": "pages/mine/mine",
-    "text": "我的",
-    "iconPath": "img/我的1.png",
-    "selectedIconPath": "img/我的2.png"
-  }
-  ]
+    "list": [
+      {
+        "pagePath": "pages/gift1/gift1",
+        "text": "首页",
+        "iconPath": "img/首页1.png",
+        "selectedIconPath": "img/首页2.png"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "礼物推荐",
+        "iconPath": "img/资讯1.png",
+        "selectedIconPath": "img/资讯2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "img/我的1.png",
+        "selectedIconPath": "img/我的2.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

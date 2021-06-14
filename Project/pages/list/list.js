@@ -1,66 +1,25 @@
 // pages/list/list.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    gifts:[{"product_id":"0","num":"0","price":"88","name":"零食盘","img":"../../img/g1.webp"},
+    {"product_id":"1","num":"0","price":"288"},
+    {"product_id":"2","num":"0","price":"66"},
+    {"product_id":"3","num":"0","price":"69"},
+    {"product_id":"4","num":"0","price":"123"}]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+  getGift:function(e){
+    var that = this;
+    var val=e.currentTarget.dataset.text; 
+    var gift=that.data.gifts;
+    var i;
+    gift[val].num=1;
+    this.setData({
+      gifts:gift
+    })
+    wx.setStorageSync('gifts',JSON.stringify(that.data.gifts[val]))
+    wx.switchTab({
+      url:'../gift1/gift1'
+    })
+    }
 })

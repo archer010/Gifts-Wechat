@@ -6,8 +6,8 @@
     </view> 
     <block wx:if="{{gifts.length>0}}">
       <view class="gift-lists">
-        <block wx:for="{{gifts}}" wx:for-index="index" wx:key="key">
-            <view class="item">
+        <!-- <block wx:for="{{gifts}}" >
+             <view class="item">
               <image class="item-img" src="{{item.img}}"></image>
               <view class="caption">
                   <view class="name">{{item.name}}</view>
@@ -19,8 +19,9 @@
                   <input type="number" disabled class="ipt" value="{{item.num}}"></input>
                   <view class="plus" bindtap='plusAction' data-id="{{item.product_id}}">+</view>
               </view>
-            </view>          
-        </block>
+            </view>           
+            <view>{{item.name}}</view>
+        </block> -->
         <view class="gift-total">
             <text class="num">共{{totalgiftsNum}}件礼物</text>
             <text bindtap='bindViewTap' class="add">继续添加></text>
