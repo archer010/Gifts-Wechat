@@ -1,2 +1,13 @@
 <!--pages/info/info.wxml-->
-<text>pages/info/info.wxml</text>
+<view class="title">
+      <h1>礼物推荐</h1>
+</view>
+<view class="title1">
+      <text>请选择要送礼物的对象</text>
+</view>
+<view >
+<button class="buy" data-text="0" bindtap='myclick'>男生</button>
+</view>
+<view >
+<button class="buy" data-text="0" bindtap='myclick1'>女生</button>
+</view>

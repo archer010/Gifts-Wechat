@@ -1,0 +1,11 @@
+<!--pages/woman1/woman1.wxml-->
+<view class="product">
+<image src="../../img/g1.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">客厅茶几家用简约网红款多层北欧轻奢风零食盘
+</text>
+<view class="price">单价：￥88</view>
+<button class="buy" data-text="0" bindtap='getGift'>购买</button>
+</view>
+</view>
+

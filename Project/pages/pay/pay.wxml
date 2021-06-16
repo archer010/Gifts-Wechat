@@ -1,0 +1,5 @@
+<!--pages/pay/pay.wxml-->
+<view class="pay-title">
+    在该页面进行好友选择与微信支付
+</view>
+<button class="pay-but" bindtap='paybut'>支付</button>

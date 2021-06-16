@@ -1,0 +1,19 @@
+<!--pages/woman/woman.wxml-->
+<view class="title">
+      <h1>礼物推荐</h1>
+</view>
+<view class="title1">
+      <text>请选择要送礼物的对象</text>
+</view>
+<view >
+<button class="buy" data-text="0" bindtap='myclick1'>母亲</button>
+</view>
+<view >
+<button class="buy" data-text="0" bindtap='myclick2'>女儿</button>
+</view>
+<view >
+<button class="buy" data-text="0" bindtap='myclick3'>女朋友</button>
+</view>
+<view >
+<button class="buy" data-text="0" bindtap='myclick4'>女性朋友</button>
+</view>

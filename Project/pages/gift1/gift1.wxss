@@ -120,7 +120,8 @@ page{
   position: relative;
   padding-bottom:10rpx;
 }
-.gift-lists .item .item-img{
+/* .gift-lists .item */
+.item-img{
   width: 140rpx;
   height: 140rpx;
   padding-right: 20rpx;

@@ -23,6 +23,18 @@
           "pathName": "pages/gift1/gift1",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/pay/pay",
+          "pathName": "pages/pay/pay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/info/info",
+          "pathName": "pages/info/info",
+          "query": "",
+          "scene": null
         }
       ]
     }

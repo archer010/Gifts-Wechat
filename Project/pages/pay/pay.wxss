@@ -1,0 +1,14 @@
+/* pages/pay/pay.wxss */
+.pay-title{
+    width: 750rpx;
+    height: 300rpx;
+    color: red;
+    text-align: center;
+    font-size: larger;
+}
+.pay-but{
+    width: 300rpx;
+    height: 100rpx;
+    background-color: red;
+    color:white;
+}

@@ -1,0 +1,19 @@
+<!--pages/woman3/woman3.wxml-->
+<view class="product">
+<image src="../../img/g3.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">生日礼物送女友女生的情人节惊喜实用浪漫创意
+</text>
+<view class="price">单价：￥66</view>
+<button class="buy" data-text="2" bindtap='getGift'>购买</button>
+</view>
+</view>
+<view class="product">
+<image src="../../img/g5.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">生日礼物送女友给朋友闺蜜毕业走心实用
+</text>
+<view class="price">单价：￥123</view>
+<button class="buy" data-text="3" bindtap='getGift'>购买</button>
+</view>
+</view>

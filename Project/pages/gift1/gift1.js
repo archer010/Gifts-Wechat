@@ -166,7 +166,7 @@ Page({
   },
   //事件处理函数
   bindViewTap: function () {//选择商品跳转列表页
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../list/list'
     })
   },
@@ -432,157 +432,9 @@ Page({
     return String(utimeStamp);
   },
   getRedPackage:function(){//生成礼物红包操作
-    //表单数据验证
-    var _this = this;
-    var result = _this.checkForm();
-    if(!result){
-        return;
-    }
-    //表单通过之后检测登录状态和授权状态
-    wx.showLoading({
-      title: '验证登录',
-    });
-    wx.checkSession({
-        success:function(){//sessionKey未过期
-            //判断授权状态
-          wx.getSetting({
-            success: res => {
-              if (res.authSetting['scope.userInfo']) {
-                // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-                wx.getUserInfo({
-                  success: res => {
-                    // 可以将 res 发送给后台解码出 unionId
-                    app.globalData.userInfo = res.userInfo;
-                    wx.request({
-                      url: app.globalData.apiDomain+'/api/member/code?act=getUserInfo',
-                      data: {
-                        'iv': res.iv,
-                        'encryptedData': res.encryptedData,
-                        'login_key': wx.getStorageSync('login_key')
-                      },
-                      method: "POST",
-                      header: {
-                        'content-type': 'application/json' // 默认值
-                      },
-                      success: function (res) {
-                        wx.hideLoading();
-                        wx.showLoading({
-                          title: '创建订单',
-                        });
-                        wx.request({
-                          url: app.globalData.apiDomain+'/api/order?act=creatOrder',//生成礼物红包接口
-                          data:{
-                            'productList': _this.data.gifts,
-                            'login_key':wx.getStorageSync('login_key'),
-                            'play': { 'method': _this.data.gifttype, 'openTime': _this.getGiftsTimestamp(), 'openPeople': _this.data.personNum},
-                            'wish': _this.data.wish ? _this.data.wish:'大吉大利，送你好礼'
-                          },
-                          method: "POST",
-                          header: {
-                            'content-type': 'application/json' // 默认值
-                          },
-                          success:function(res){
-                            if (res.data.code == 'error' && res.data.message) {
-                              wx.showToast({
-                                title: res.data.message,
-                                icon:'none'
-                              })
-                            }else{
-                              var _orderId = res.data.data.order_id;
-                              wx.request({
-                                url: app.globalData.apiDomain + '/api/payment?act=requestPayment',//订单创建成功后请求微信支付的参数
-                                data: {
-                                  'login_key': wx.getStorageSync('login_key'),
-                                  'order_id': _orderId
-                                },
-                                method: "POST",
-                                header: {
-                                  'content-type': 'application/json' // 默认值
-                                },
-                                success: function (res) {
-                                  wx.hideLoading();
-                                  wx.showLoading({
-                                    title: '等待支付',
-                                  });
-                                  //吊起微信支付
-                                  if (res.data.data.nonceStr && res.data.data.package && res.data.data.timeStamp && res.data.data.paySign) {
-                                    wx.requestPayment({
-                                      'timeStamp': String(res.data.data.timeStamp),
-                                      'nonceStr': res.data.data.nonceStr,
-                                      'package': res.data.data.package,
-                                      'signType': 'MD5',
-                                      'paySign': res.data.data.paySign,
-                                      'success': function (res) {//微信支付成功之后
-                                        //TODO清除数据
-                                        try {
-                                          wx.removeStorageSync('gifts');
-                                          wx.removeStorageSync('wish');
-                                          wx.removeStorageSync('gifttype');
-                                          wx.removeStorageSync('p_num');
-                                        } catch (e) {
-                                          // Do something when catch error
-                                        }
-                                        _this.setData({
-                                          gifts: [],
-                                          wish: '',
-                                          gifttype: '直接送礼',
-                                          personNum: _this.data.personNum,
-                                        })
-                                        wx.hideLoading();
-                                        wx.navigateTo({
-                                          url: '../payment/payresult/payresult?orderId=' + _orderId,
-                                        })
-                                      },
-                                      'fail': function (res) {
-                                        wx.hideLoading();
-                                        _this.errorBox('支付失败');
-                                      }
-                                    })
-                                  }
-                                },
-                                fail: function (res) {
-                                  wx.hideLoading();
-                                  if (res.data.message) {
-                                    wx.showToast({
-                                      title: res.data.message
-                                    })
-                                  }
-                                }
-                              })
-                            }
-                            
-                          },
-                          fail:function(){
-                            //订单创建失败
-                            _this.errorBox('网络异常，请稍后再试');
-                          }
-                        })
-                      },
-                      fail:function(){
-                        //后台解密用户信息失败
-                        _this.errorBox('网络异常，请稍后再试');
-                      }
-                    });
-
-                    //由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回所以此处加入 callback 以防止这种情况
-                    if (_this.userInfoReadyCallback) {
-                      _this.userInfoReadyCallback(res)
-                    }
-                  }
-                })
-              }else{
-                //未授权跳到授权登录页
-                wx.hideLoading();
-                wx.navigateTo({
-                  url: '../login/login?redirect=index',
-                })
-              }
-            }
-          })
-        },
-        fail:function(){//登录过期
-          _this.relogin(true);
-        }
-    })
+  wx.clearStorageSync()
+   wx.redirectTo({
+     url: '../pay/pay',
+   })
   }
 })

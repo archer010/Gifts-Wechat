@@ -1,0 +1,11 @@
+<!--pages/woman2/woman2.wxml-->
+<view class="product">
+<image src="../../img/g4.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">儿童节生日礼物男孩女孩小学生奖励实用毕业
+</text>
+<view class="price">单价：￥69</view>
+<button class="buy" data-text="3" bindtap='getGift'>购买</button>
+</view>
+</view>
+

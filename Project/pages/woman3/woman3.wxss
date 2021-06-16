@@ -1,0 +1,56 @@
+/* pages/woman3/woman3.wxss */
+/* pages/woman2/woman2.wxss */
+.select-tit{
+  margin:0px auto; 
+  text-align: center;
+  width: 750rpx;
+  height: 50rpx;
+  background-color: rgb(75, 192, 228);
+  border-radius: 15rpx;
+}
+.product{
+  width: 745rpx;
+  height: 300rpx;
+  border: 1px solid gray;
+}
+image{
+  width: 300rpx;
+  height: 200rpx;
+  float: left;
+}
+.pro-text{
+  width: 425rpx;
+  height: 300rpx;
+  margin: 0px auto;
+  display: inline-block;
+}
+.but{
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+}
+.but image{
+  margin-left: -25rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.pro-name{
+  width: 100rpx;
+  height: 50rpx;
+}
+.buy{
+  margin-top: 35rpx;
+  width: 300rpx;
+  height: 100rpx;
+  background-color: red;
+  color:white;
+}
+.price{
+  margin-top: 20rpx;
+  color: red;
+  margin-left: 100rpx;
+}
+.you{
+  width: 100rpx;
+  height: 100rpx;
+}

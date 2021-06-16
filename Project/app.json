@@ -1,12 +1,18 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/gift1/gift1",
     "pages/guide/guide",
-    "pages/index/index",
+    "pages/pay/pay",
     "pages/choose/choose",
     "pages/list/list",
     "pages/info/info",
     "pages/mine/mine",
+    "pages/woman/woman",
+    "pages/woman1/woman1",
+    "pages/woman2/woman2",
+    "pages/woman3/woman3",
+    "pages/woman4/woman4",
     "pages/logs/logs",
     "pages/search_/search_"
   ],
@@ -32,7 +38,7 @@
         "selectedIconPath": "img/资讯2.png"
       },
       {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/index/index",
         "text": "我的",
         "iconPath": "img/我的1.png",
         "selectedIconPath": "img/我的2.png"

@@ -1,39 +1,34 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
+    // 展示本地存储能力001bHJ281qo7rS1JR1481OQC281bHJ2B
+    var _this = this;
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
+    
+      wx.login({
+        success: res => {
+          console.log(res);
+          wx.request({
+            url: _this.globalData.apiDomain +'/api/member/code?act=login',
+            data: {
+              code: res.code
+            },
+            method: "POST",
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success: function (res) {
+              wx.setStorageSync('login_key', res.data.data.login_key);
             }
           })
         }
-      }
-    })
+      });
   },
   globalData: {
+    apiDomain:'https://wx.100bsh.com',
     userInfo: null,
+    login_key:''
   }
 })

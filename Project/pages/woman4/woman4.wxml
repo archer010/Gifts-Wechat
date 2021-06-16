@@ -1,0 +1,21 @@
+<!--pages/woman4/woman4.wxml-->
+
+<view class="product">
+<image src="../../img/g5.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">生日礼物送女友给朋友闺蜜毕业走心实用
+</text>
+<view class="price">单价：￥123</view>
+<button class="buy" data-text="3" bindtap='getGift'>购买</button>
+</view>
+</view>
+
+<view class="product">
+<image src="../../img/g2.webp" mode="widthFix"></image>
+<view class="pro-text">
+<text class="pro-name">大英博物馆安德森猫风暴瓶天气预报瓶创意毕业礼
+</text>
+<view class="price">单价：￥288</view>
+<button class="buy" data-text="1" bindtap='getGift'>购买</button>
+</view>
+</view>
